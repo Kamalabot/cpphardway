@@ -38,3 +38,51 @@ int main() {
     cout << foods << " This will again contain the address only, its a pointer in disguise\n";
     cout << *foods << " This will again contain the address only\n";
 }
+/*
+// Pass by value
+void add(int x, int y) {
+  x += y;
+}
+
+int main() {
+  int a = 10;
+  int b = 20;
+
+  add(a, b);
+
+  // a will still be 10
+  std::cout << a << std::endl;
+}
+*/
+/*
+// Pass by reference
+void add(int& x, int& y) {
+  x += y;
+}
+
+int main() {
+  int a = 10;
+  int b = 20;
+
+  add(a, b);
+
+  // a will now be 30
+  std::cout << a << std::endl;
+}
+*/
+/*
+// Pass by pointer
+void add(int* x, int* y) {
+  *x += *y;
+}
+
+int main() {
+  int a = 10;
+  int b = 20;
+
+  add(&a, &b);
+
+  // a will now be 30
+  std::cout << a << std::endl;
+}
+*/
