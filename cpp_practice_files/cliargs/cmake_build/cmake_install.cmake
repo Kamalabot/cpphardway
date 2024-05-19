@@ -1,8 +1,8 @@
-# Install script for directory: D:/gitFolders/cpphardway/cpp_practice_files/practice_cmake
+# Install script for directory: D:/gitFolders/cpphardway/cpp_practice_files/cliargs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/useadder")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/cliargs")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/gitFolders/cpphardway/cpp_practice_files/practice_cmake/cmake-build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/gitFolders/cpphardway/cpp_practice_files/cliargs/cmake_build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

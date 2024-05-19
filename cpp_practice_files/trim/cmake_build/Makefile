@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\gitFolders\cpphardway\cpp_practice_files\practice_cmake
+CMAKE_SOURCE_DIR = D:\gitFolders\cpphardway\cpp_practice_files\trim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\gitFolders\cpphardway\cpp_practice_files\practice_cmake\cmake-build
+CMAKE_BINARY_DIR = D:\gitFolders\cpphardway\cpp_practice_files\trim\cmake_build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\gitFolders\cpphardway\cpp_practice_files\practice_cmake\cmake-build\CMakeFiles D:\gitFolders\cpphardway\cpp_practice_files\practice_cmake\cmake-build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\gitFolders\cpphardway\cpp_practice_files\trim\cmake_build\CMakeFiles D:\gitFolders\cpphardway\cpp_practice_files\trim\cmake_build\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\gitFolders\cpphardway\cpp_practice_files\practice_cmake\cmake-build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\gitFolders\cpphardway\cpp_practice_files\trim\cmake_build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -116,41 +116,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named useadder
+# Target rules for targets named trim
 
 # Build rule for target.
-useadder: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 useadder
-.PHONY : useadder
+trim: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 trim
+.PHONY : trim
 
 # fast build rule for target.
-useadder/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\useadder.dir\build.make CMakeFiles/useadder.dir/build
-.PHONY : useadder/fast
+trim/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\trim.dir\build.make CMakeFiles/trim.dir/build
+.PHONY : trim/fast
 
-useadder.obj: useadder.cpp.obj
-.PHONY : useadder.obj
+trim.obj: trim.cpp.obj
+.PHONY : trim.obj
 
 # target to build an object file
-useadder.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\useadder.dir\build.make CMakeFiles/useadder.dir/useadder.cpp.obj
-.PHONY : useadder.cpp.obj
+trim.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\trim.dir\build.make CMakeFiles/trim.dir/trim.cpp.obj
+.PHONY : trim.cpp.obj
 
-useadder.i: useadder.cpp.i
-.PHONY : useadder.i
+trim.i: trim.cpp.i
+.PHONY : trim.i
 
 # target to preprocess a source file
-useadder.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\useadder.dir\build.make CMakeFiles/useadder.dir/useadder.cpp.i
-.PHONY : useadder.cpp.i
+trim.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\trim.dir\build.make CMakeFiles/trim.dir/trim.cpp.i
+.PHONY : trim.cpp.i
 
-useadder.s: useadder.cpp.s
-.PHONY : useadder.s
+trim.s: trim.cpp.s
+.PHONY : trim.s
 
 # target to generate assembly for a file
-useadder.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\useadder.dir\build.make CMakeFiles/useadder.dir/useadder.cpp.s
-.PHONY : useadder.cpp.s
+trim.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\trim.dir\build.make CMakeFiles/trim.dir/trim.cpp.s
+.PHONY : trim.cpp.s
 
 # Help Target
 help:
@@ -160,10 +160,10 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... useadder
-	@echo ... useadder.obj
-	@echo ... useadder.i
-	@echo ... useadder.s
+	@echo ... trim
+	@echo ... trim.obj
+	@echo ... trim.i
+	@echo ... trim.s
 .PHONY : help
 
 
