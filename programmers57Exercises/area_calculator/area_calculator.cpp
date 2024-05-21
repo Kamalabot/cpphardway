@@ -17,8 +17,8 @@ int main(){
     }
     area = room_length * room_width;
 
-    if (room_length == room_width) cout << "Area of Square is: " << area << "SqUnits\n";
-    else cout << "Area of rectangle is: " << area << "SqUnits\n";
+    if (room_length == room_width) cout << "Area of Square is: " << area << " SqUnits \n";
+    else cout << "Area of rectangle is: " << area << " SqUnits \n";
 
     return 0;
 }
