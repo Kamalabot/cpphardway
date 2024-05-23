@@ -1,0 +1,38 @@
+# Variables
+REMOTE_USER = user
+REMOTE_HOST = remote_host
+REMOTE_DIR = /home/user/CudaProject
+LOCAL_OUTPUT_DIR = ./output
+TARGET = CudaExecutable
+SOURCE = main.cu
+
+# Default target
+all: build copy execute retrieve
+
+# Copy project files to the remote machine
+copy:
+    @echo "Copying project files to remote machine..."
+    scp -r ./* $(REMOTE_USER)@$(REMOTE_HOST):$(REMOTE_DIR)
+
+# Build the project on the remote machine
+build: copy
+    @echo "Building project on remote machine..."
+    ssh $(REMOTE_USER)@$(REMOTE_HOST) 'cd $(REMOTE_DIR) && mkdir -p build && cd build && cmake .. && make'
+
+# Execute the built executable on the remote machine
+execute: build
+    @echo "Executing the built executable on remote machine..."
+    ssh $(REMOTE_USER)@$(REMOTE_HOST) 'cd $(REMOTE_DIR)/build && ./$(TARGET) > output.txt'
+
+# Retrieve the output file from the remote machine
+retrieve: execute
+    @echo "Retrieving output file from remote machine..."
+    mkdir -p $(LOCAL_OUTPUT_DIR)
+    scp $(REMOTE_USER)@$(REMOTE_HOST):$(REMOTE_DIR)/build/output.txt $(LOCAL_OUTPUT_DIR)/output.txt
+
+# Clean up the build directory on the remote machine
+clean:
+    @echo "Cleaning up build directory on remote machine..."
+    ssh $(REMOTE_USER)@$(REMOTE_HOST) 'cd $(REMOTE_DIR) && rm -rf build'
+
+.PHONY: all copy build execute retrieve clean
