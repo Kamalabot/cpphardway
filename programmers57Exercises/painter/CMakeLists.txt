@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.8)
+project(painter)
+add_executable(painter main_painter.cpp)
+target_link_directories(painter PRIVATE ${CMAKE_SOURCE_DIR}/cmake-build)
+target_link_libraries(painter utils)
+# cmake_minimum_required(VERSION 3.29.3)
+# project(utils)
+# add_library(utils utils.cpp)
