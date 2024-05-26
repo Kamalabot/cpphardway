@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.8)
+project(json_api)
+# cmake_policy(SET CMP0054 NEW)
+# include_directories("rapidjson/")
+# add_definitions(-D__STDC_FORMAT_MACROS)
+# set_property(DIRECTORY PROPERTY COMPILE_OPTIONS ${EXTRA_CXX_FLAGS})
+add_executable(json_api json_api_req.cpp)
