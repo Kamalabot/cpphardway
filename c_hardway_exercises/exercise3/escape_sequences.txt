@@ -1,0 +1,16 @@
+Escape              Sequence Purpose Description                HEX Value in ASCII          Syntax 
+\a Alert or bell:	 Produces an audible alert or bell sound.         0x07 			printf("Hello \a World"); 
+\b Backspace:	 Moves the cursor back by one position.         0x08 			printf("Hello\bWorld"); 
+\f Form feed:	 Advances the printer to the next logical page.         0x0C 			printf("Hello\fWorld"); 
+\n Newline:	 Moves the cursor to the beginning of the next line.         0x0A 			printf("Hello\nWorld"); 
+\r Carriage return:	 Moves the cursor to the beginning of the current line         0x0D 			printf("Hello\rWorld"); 
+\t Horizontal tab:	 Moves the cursor to the next horizontal tab stop.         0x09 			printf("Hello\tWorld");
+\v Vertical tab:	 Moves the cursor to the next vertical tab stop.         0x0B 			printf("Hello\vWorld"); 
+\\ Backslash:	 Inserts a backslash character.         0x5C 			printf("Hello\World"); 
+\’ Single quote:	 Inserts a single quote character.         0x27 			printf("Hello'World"); 
+\” Double quote:	 Inserts a double quote character.         0x22 			printf("Hello"World"); 
+\? Question mark:	 Inserts a question mark character.         0x3F 			printf("Hello?World");
+\0 Null character:	 Inserts a null character.         0x00 char str[] = "Hello\0World"; 
+\nnn Octal value:	 Inserts the character represented by the octal value nnn.         0x00 to 0xFF 			printf("Hello \072 World"); 
+\xhh Hexadecimal value:	 Inserts the character represented by the hexadecima value hh.        0x00 to 0xFF 			printf("Hello\x41World"); 
+\uhhhh Universal character name:	 Inserts the character represented by the Uni de value hhhh.     None  			printf("Hello\x03A9World"); SHOULDN'T we have u in the syntax??? 
