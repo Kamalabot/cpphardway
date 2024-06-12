@@ -16,7 +16,8 @@ int main(int argc, char* argv[]){
     printf("My last name is %s. \n", last_name);
     printf("My full name is: %s %c %s \n", first_name, initial, last_name);
 
-    int bugs = 100;
+    int bugs = 2147483649; // testing overflow above 32768, and it did not overflow;
+    // tried 2147483649
     double bug_rate = 1.2;
     printf("Your bug count is %d and increasing an imaginary rate of %f\n",
             bugs, bug_rate);
