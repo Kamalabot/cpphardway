@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.8)
+project(exercise19)
+add_executable(exercise19 exercise19.c)
+# target_compile_options(exercise19 PRIVATE -O3 -Wall -g -DNDEBUG)
+target_compile_options(exercise19 PRIVATE -O3 -Wall -g)

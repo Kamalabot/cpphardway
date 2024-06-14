@@ -20,7 +20,7 @@ debug messages
 #include <stdio.h>
 #include <errno.h>
 #include <string.h>
-
+#define DNDEBUG
 #ifndef NDEBUG
 #define debug(M, ...)
 #else
@@ -50,3 +50,10 @@ debug messages
             errno=0; goto error; }
 
 #endif
+
+// CPP replaces macros with the expanded version of their definition, and it will do
+// this recursively, expanding all of the macros in macros.
+// Recursive templatized system whose power comes from generating parameterized code 
+// y, CPP has the ability to conditionally compile portions of code, so you can
+// Conditionally compile code that’s only present when you build a developer 
+// or debug version of the program.
