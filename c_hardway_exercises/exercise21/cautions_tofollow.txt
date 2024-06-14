@@ -1,0 +1,5 @@
+- do not shadow a variable, meaning use the same variable name inside and outside of the function. 
+- avoid using globals across multiple files, and use accessor to mod them 
+- when in doubt put it on heap, use malloc to create stuff explicitly place them in memory
+- don't use static in function, as it will hinder when using in multi-thread environment 
+- avoid re-using function params
