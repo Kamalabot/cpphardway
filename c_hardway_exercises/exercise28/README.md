@@ -1,0 +1,1 @@
+This is Skeleton directory to be used for further projects in learn C the hardway
