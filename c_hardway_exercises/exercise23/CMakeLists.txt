@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.8)
-project(duffdevice)
-add_executable(duffdevice exercise22.c)
-target_compile_options(gdbtest PRIVATE -g -Wall -O0)
+project(fileio)
+add_executable(fileio exercise23.c)
+target_compile_options(fileio PRIVATE -g -Wall -O0)
 add_custom_target(run
-    COMMAND gdbtest
-    DEPENDS gdbtest
+    COMMAND fileio 
+    DEPENDS fileio 
     WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
-    COMMENT "Executing Executable")
+    COMMENT "Executing fileio")
