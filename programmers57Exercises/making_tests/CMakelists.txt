@@ -1,0 +1,27 @@
+cmake_minimum_required(VERSION 3.10)
+project(GTestProject)
+
+# Enable testing
+enable_testing()
+
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 14)
+
+# Add GoogleTest
+add_subdirectory(googletest)
+include_directories(googletest/googletest/include)
+
+# Add the source files
+add_executable(${PROJECT_NAME} making_test.cpp)
+
+# Link GoogleTest to the executable
+target_link_libraries(${PROJECT_NAME} gtest gtest_main)
+
+# Add a test
+add_test(NAME MyTest COMMAND ${PROJECT_NAME})
+
+add_custom_target(run_tests 
+    COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure
+    DEPENDS ${PROJECT_NAME}
+    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+    COMMENT "Running all tests after building...")

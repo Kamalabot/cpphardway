@@ -1,10 +1,33 @@
-#include "exercise24.h"
-#include <string>
 #include <iostream>
 #include <istream>
+#include <string>
 #include <unordered_map>
+// #include "exercise24.h"
 
 using namespace std;
+
+void isPalin(string word1, string word2);
+bool isAnagram(string word1, string word2);
+
+
+int main(int argc, char **argv){
+    string word1, word2;
+    cout << "Enter two strings and I will tell if they are anagrams" << endl;
+
+    cout << "Enter the first word: ";
+    getline(cin, word1); 
+
+    cout << "Enter the second word: ";
+    getline(cin, word2); 
+
+    if (isAnagram(word1, word2)){
+        cout << "The words are anagram." << endl;
+    } else {
+        cout << "The words are not anagrams" << endl;
+    };
+
+    return 0;
+}
 
 void isPalin(string word1, string word2){
     int strlen1 = word1.length();
