@@ -1,18 +1,31 @@
 cmake_minimum_required(VERSION 3.18)  # Ensure CMake version supports CUDA
 
-project(CudaProject LANGUAGES CXX CUDA)
+project(main LANGUAGES CXX)
 
 # Define the remote build directory and user/host
-set(REMOTE_USER "user")
-set(REMOTE_HOST "remote_host")
-set(REMOTE_DIR "/home/user/CudaProject")
-set(LOCAL_OUTPUT_DIR "./output")
+set(REMOTE_USER "aicoder")
+set(REMOTE_HOST "aicontroller")
+set(REMOTE_DIR "/home/aicoder/tmp/")
+set(LOCAL_OUTPUT_DIR "D:/gitFolders/cpphardway/programmers57Exercises/remote_exec/")
 
 # Define the CUDA executable
-add_executable(CudaExecutable main.cu)
+add_executable(main main.cpp)
 
 # Specify the C++ standard if necessary
-set_target_properties(CudaExecutable PROPERTIES CXX_STANDARD 14)
+set_target_properties(main PROPERTIES CXX_STANDARD 14)
+
+# Helper function to convert Windows paths to Unix paths for scp
+function(unix_to_windows_path WIN_PATH UNIX_PATH_VAR)
+    string(REPLACE "\\" "\\" UNIX_PATH ${WIN_PATH})
+    set(${UNIX_PATH_VAR} ${UNIX_PATH} PARENT_SCOPE)
+endfunction()
+
+
+# Convert CMake source directory path to Unix format
+windows_to_unix_path(${CMAKE_SOURCE_DIR} CMAKE_SOURCE_DIR_UNIX)
+
+# Convert CMake local output directory path to Unix format
+windows_to_unix_path(${LOCAL_OUTPUT_DIR} LOCAL_OUTPUT_DIR)
 
 # Custom commands for remote operations
 function(remote_command cmd)
@@ -27,7 +40,7 @@ endfunction()
 
 # Copy files to the remote machine
 add_custom_target(copy ALL
-    COMMAND scp -r ${CMAKE_SOURCE_DIR}/* ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_DIR}
+    COMMAND scp -r ${CMAKE_SOURCE_DIR}/*.* ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_DIR}
     COMMENT "Copying project files to remote machine..."
 )
 
@@ -42,7 +55,7 @@ add_custom_target(build_remote ALL
 
 # Execute the built executable on the remote machine
 add_custom_target(execute_remote ALL
-    COMMAND remote_command "cd ${REMOTE_DIR}/build && ./CudaExecutable > output.txt"
+    COMMAND remote_command "cd ${REMOTE_DIR}/build && ./main > output.txt"
     DEPENDS build_remote
     COMMENT "Executing the built executable on remote machine..."
 )
@@ -62,4 +75,4 @@ add_custom_target(clean_remote
 )
 
 # Default target depends on retrieve
-add_custom_target(all DEPENDS retrieve)
+add_custom_target(run_all DEPENDS retrieve)
