@@ -45,3 +45,7 @@ double eauclaire(double price){
 double dunn(double price){
     return price * (1 + 0.004);
 }
+
+int MAC(int x, int y, int &sum){
+    return sum + x * y;
+}

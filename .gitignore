@@ -36,3 +36,6 @@
 CMakeCache.txt
 build/
 CMakeFiles/
+googletest/
+test/
+cmake-build/
