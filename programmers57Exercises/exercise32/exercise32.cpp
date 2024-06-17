@@ -1,0 +1,54 @@
+#include <iostream>
+#include <cstdlib>
+#include <time.h>
+
+using namespace std;
+
+int main(int argc, char **argv){
+    int level;
+    cout << "Provide the difficulty level: ";
+    cin >> level;
+    srand(time(0));
+
+    int randg;
+    // https://www.geeksforgeeks.org/rand-and-srand-in-ccpp/
+    if (level == 1){
+        // randg = (rand() % (10 - 0 + 1)) + 1;
+        randg = rand() % 10;
+        for (int i = 0; i < 5; i++){
+            cout << rand() % 10 << endl;
+        }
+        cout << "Random number between 0 and 10 is chosen" << endl;
+    } else if (level == 2){
+        randg = rand() % 100;
+        for (int i = 0; i < 5; i++){
+            cout << rand() % 100 << endl;
+        }
+        cout << "Random number between 0 and 100 is chosen" << endl;
+    } else {
+        randg = rand() % 1000;
+        for (int i = 0; i < 5; i++){
+            cout << rand() % 1000 << endl;
+        }
+        cout << "Random number between 0 and 1000 is chosen" << endl;
+    }
+
+    cout << "Random number chosen is: " << randg;
+    int guessnum = 0;
+    int yourguess;
+
+    while (true){
+        cout << "Make you guess :";
+        cin >> yourguess;
+
+        if (yourguess > randg){
+            cout << "Too high..." << endl;
+        } else if(yourguess < randg) {
+            cout << "Too low..." << endl;
+        } else {
+            cout << "Gotcha.. its " << randg << endl;
+            break;
+        }
+    }
+    return 0;
+}
