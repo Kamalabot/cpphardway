@@ -42,11 +42,22 @@ int main(int argc, char **argv){
         cin >> yourguess;
 
         if (yourguess > randg){
-            cout << "Too high..." << endl;
+            guessnum += 1;
+            cout << "Too high..." << "Your Guess Num: " << guessnum << endl;
         } else if(yourguess < randg) {
-            cout << "Too low..." << endl;
+            guessnum += 1;
+            cout << "Too low..."  << "Your Guess Num: " << guessnum << endl;
         } else {
             cout << "Gotcha.. its " << randg << endl;
+            if (guessnum == 1) {
+                cout << "you are mind reader." << endl;
+            } else if (guessnum > 1 && guessnum < 4) {
+                cout << "Impressive" << endl;
+            } else if (guessnum >= 4 && guessnum < 6) {
+                cout << "Can do better" << endl;
+            } else {
+                cout << "Better luck next time" << endl;
+            }
             break;
         }
     }
