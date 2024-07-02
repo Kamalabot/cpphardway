@@ -2,7 +2,8 @@
 
 int main(){
    
-   //Compile time error
+   //Compile time error, more like spelling error 
+   // that makes no difference to the code logic
    std::cout << "Hello Word!" << std::endl;
 
    //Run time error

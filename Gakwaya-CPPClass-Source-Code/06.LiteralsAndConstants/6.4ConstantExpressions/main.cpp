@@ -1,6 +1,20 @@
 #include <iostream>
 
+/*
+const:
 
+- const is a cv-qualifier (constant volatile qualifier) that indicates a variable's value won't change after initialization.
+- It's a runtime concept, meaning the variable's value is determined during program execution.
+- const variables can be initialized dynamically, using runtime computations.
+
+Example: const int x = foo(); (x is const, but its value is determined at runtime)
+
+constexpr:
+
+- constexpr is a keyword that defines a variable or function that can be evaluated at compile-time.
+- It's a compile-time concept, meaning the variable's value is determined during compilation.
+- constexpr variables must be initialized with a constant expression, which can be evaluated by the compiler.
+*/
 int main(){
 
 	constexpr int SOME_LIB_MAJOR_VERSION {1237};

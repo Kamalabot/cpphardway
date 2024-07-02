@@ -51,8 +51,11 @@ int main(){
     //With number systems - Hex : prefix with 0x
     unsigned int hex_number{ 0x22BU}; // Dec 555
     int hex_number2 {0x400};// Dec 1024
+    int oct_number3 {010};// Dec 1024
+    
     std::cout << std::hex <<  "The hex number is : " << hex_number << std::endl;
     std::cout << std::dec <<  "The hex number2 is : " << hex_number2 << std::endl;
+    std::cout << std::oct <<  "The oct number3 is : " << oct_number3 << std::endl;
     
     //Representing colors with hex
     int black_color {0xffffff};

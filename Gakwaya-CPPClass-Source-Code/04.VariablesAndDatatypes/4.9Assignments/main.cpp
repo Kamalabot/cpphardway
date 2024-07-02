@@ -37,8 +37,13 @@ int main(){
     auto var3 {333u}; // Declare and initialize with type deduction
     
     var3 = -22; // Assign negative number. DANGER!
-    
+
     std::cout << "var3 : " << var3 << std::endl;
+    // prints huge number that is very huge
+   // -22 gets converted to a large positive value, often referred to as a "wrap-around" effect. 
+
+    std::cout << "var3 : " << (signed int)var3 << std::endl;
+    std::cout << "var3 : " << (int)var3 << std::endl;
 
    
     return 0;

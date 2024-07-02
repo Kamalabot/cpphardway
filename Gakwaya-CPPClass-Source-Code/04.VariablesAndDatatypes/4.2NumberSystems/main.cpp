@@ -12,6 +12,7 @@ int main(){
    std::cout << "number2 : " << number2 << std::endl;
    std::cout << "number3 : " << number3 << std::endl;
    std::cout << "number4 : " << number4 << std::endl;
+   // all are print the int 15, as it is implicitly converted
    
     return 0;
 }

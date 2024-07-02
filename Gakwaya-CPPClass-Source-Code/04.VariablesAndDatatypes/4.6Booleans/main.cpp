@@ -29,7 +29,7 @@ int main(){
     std::cout << "red_light : " << red_light << std::endl;
     std::cout << "green_light : " << green_light << std::endl;
 
-    std::cout << std::boolalpha;
+    std::cout << std::boolalpha; // prints out the booleans in words
     std::cout << "red_light : " << red_light << std::endl;
     std::cout << "green_light : " << green_light << std::endl;
    

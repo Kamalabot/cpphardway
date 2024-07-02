@@ -15,7 +15,7 @@ int main(){
     
     std::cout << "result : " << result << std::endl;
 
-    result = a/b*c +d - e + f;  //   16 + 9 - 3 + 2
+    result = a/b*c +d - e + f;  //   16 + 9 - 3 + 2 // 6 / 3 = 2 , 2 * 8 = 16
     std::cout << "result : " << result << std::endl;
 
     result = (a + b) * c -d/e -f + g; // 72-3-2+5

@@ -8,7 +8,8 @@ int addNumbers( int first_param, int second_param){
 int main(){
 
     int first_number {13}; // Statement
-    int second_number {7};
+    // its one of the ways of declaring variables
+    int second_number {7}; // interesting syntax!!!
 
     std::cout << "First number : " << first_number << std::endl; // 13
     std::cout << "Second number : " << second_number << std::endl; // 7
@@ -23,7 +24,6 @@ int main(){
     std::cout << "Sum : " << sum << std::endl;
 
     std::cout << "Sum : " << addNumbers(3,42) << std::endl;
-
 
     return 0;
 }

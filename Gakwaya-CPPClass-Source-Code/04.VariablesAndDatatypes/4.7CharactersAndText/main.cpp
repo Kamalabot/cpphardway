@@ -20,7 +20,7 @@ int main(){
     
     char value = 65 ; // ASCII character code for 'A'
     std::cout << "value : " << value << std::endl; // A
-    std::cout << "value(int) : " << static_cast<int>(value) << std::endl; 
+    std::cout << "value(int) : " << static_cast<double>(value) << std::endl; 
 
     return 0;
 }

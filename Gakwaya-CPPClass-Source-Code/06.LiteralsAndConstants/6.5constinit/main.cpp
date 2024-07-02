@@ -10,7 +10,8 @@ constinit int age2 {age1}; // Initializing with age would lead to a compiler err
                                  // age is not const
 //constinit int age3 {val3}; // Error : val3 is evaluated at run time
                            // can't const initialize age3
-                           
+// In essence, constinit guarantees that the variable is initialized before the program
+// starts running, but it doesn't require the initializer to be a constexpr.  
 const constinit double weight {33.33};
 //constexpr constinit double scale_factor{3.11};// Can't combine constexpr and constinit
 

@@ -10,14 +10,18 @@ int main(){
 	char var4 {50};
 	
 	std::cout << "size of var1 : " << sizeof(var1) << std::endl;
+	std::cout << "val of var1 : " << var1 << std::endl;
+
 	std::cout << "size of var2 : " << sizeof(var2) << std::endl;
+	std::cout << "val of var2 : " << var2 << std::endl;
+
 	std::cout << "size of var3 : " << sizeof(var3) << std::endl;
 	std::cout << "size of var4 : " << sizeof(var4) << std::endl;
 	
-	auto result1 = var1 + var2 ;
+	auto result1 = var1 + var2; // you are adding int and char
 	auto result2 = var3 + var4;
 	
-	std::cout << "size of result1 : " << sizeof(result1) << std::endl; // 4
+	std::cout << "size of result1 : " << sizeof(result1) << std::endl; // 4 // this is the size of the values, not the values themselves
 	std::cout << "size of result2 : " << sizeof(result2) << std::endl; // 4
 	
    
