@@ -1,0 +1,20 @@
+In C++, the std namespace is a special namespace that is used to group the standard library functions and classes. The standard library headers (like <iostream>, <string>, etc.) define their functions and classes inside the std namespace.
+
+When you include a standard library header, the functions and classes defined in that header become available in the current scope, but they are still part of the std namespace.
+
+For example, when you include <iostream>, the std::cout object becomes available, but it's still part of the std namespace. You can access it using the fully qualified name std::cout or bring it into scope with a using declaration like using std::cout;.
+
+The std namespace is a way to group related functions and classes together, making it easier to avoid name conflicts and provide a clear hierarchy of names.
+
+Here's an example:
+
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, world!" << std::endl;  // Fully qualified name
+    using std::cout;  // Bring cout into scope
+    cout << "Hello again!" << std::endl;  // Now we can use cout without std::
+    return 0;
+}
+
+In this example, std::cout is part of the std namespace, but we bring it into scope with a using declaration, allowing us to use it without the std:: prefix.

@@ -1,0 +1,31 @@
+1. Memory Management:
+    - malloc(): dynamically allocates memory
+    - calloc(): dynamically allocates memory and initializes it to zero
+    - realloc(): resizes a previously allocated memory block
+    - free(): releases allocated memory
+2. String Operations:
+    - strlen(): returns the length of a string
+    - strcpy(): copies a string
+    - strcmp(): compares two strings
+    - strcat(): concatenates two strings
+3. Sorting and Searching:
+    - qsort(): sorts an array of elements
+    - bsearch(): searches for an element in a sorted array
+4. Mathematical Functions:
+    - abs(): returns the absolute value of an integer
+    - labs(): returns the absolute value of a long integer
+    - rand(): generates a random number
+    - srand(): initializes the random number generator
+5. Utility Functions:
+    - atoi(): converts a string to an integer
+    - atol(): converts a string to a long integer
+    - atof(): converts a string to a floating-point number
+    - getenv(): retrieves the value of an environment variable
+6. Exit and Error Handling:
+    - exit(): terminates the program
+    - abort(): terminates the program abruptly
+    - perror(): prints an error message
+7. Time and Date Functions:
+    - time(): returns the current time
+    - clock(): returns the processor time
+    - ctime(): converts a time value to a string

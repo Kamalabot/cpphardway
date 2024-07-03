@@ -1,0 +1,31 @@
+The iomanip header in C++ is mainly used for input/output manipulation. It provides various functions and objects that help control the formatting of input and output streams, such as:
+
+1. Stream manipulators: These are functions that can be inserted into an output stream to modify the output format. Examples include:
+    - std::setprecision(): sets the precision for floating-point output
+    - std::fixed and std::scientific: set the floating-point output format
+    - std::setw(): sets the minimum field width
+    - std::setfill(): sets the fill character
+2. Input/output flags: These are used to control the behavior of input and output streams. Examples include:
+    - std::ios::left and std::ios::right: set the output alignment
+    - std::ios::showpoint and std::ios::showprecision: control the display of floating-point numbers
+3. Locale-specific formatting: The iomanip header also provides functions for locale-specific formatting, such as std::put_time and std::get_time, which allow you to format dates and times according to the current locale.
+
+Some common uses of the iomanip header include:
+
+- Formatting output to a specific width or precision
+- Controlling the alignment of output
+- Setting the fill character for output
+- Formatting dates and times
+
+Here's an example of using std::setprecision and std::fixed to format a floating-point number:
+
+#include <iostream>
+#include <iomanip>
+
+int main() {
+    double x = 3.14159;
+    std::cout << std::setprecision(4) << std::fixed << x << std::endl;
+    return 0;
+}
+
+This code will output 3.1416 with four digits after the decimal point.

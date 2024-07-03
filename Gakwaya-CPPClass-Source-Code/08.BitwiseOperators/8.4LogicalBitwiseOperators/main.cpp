@@ -9,11 +9,9 @@ int main(){
     unsigned char value2 {0x5}; // 0000 0101
 	
 
-    std::cout << std::setw(COLUMN_WIDTH) << "value1 : " 
-		<< std::setw(COLUMN_WIDTH) << std::bitset<8>(value1) << std::endl; 
+    std::cout << std::setw(COLUMN_WIDTH) << "value1 : " << std::setw(COLUMN_WIDTH) << std::bitset<8>(value1) << std::endl; 
 		
-	std::cout << std::setw(COLUMN_WIDTH) << "value2 : "
-		<< std::setw(COLUMN_WIDTH) << std::bitset<8>(value2) << std::endl;
+	std::cout << std::setw(COLUMN_WIDTH) << "value2 : " << std::setw(COLUMN_WIDTH) << std::bitset<8>(value2) << std::endl;
     
 	//AND
 	std::cout << std::endl;
@@ -54,9 +52,5 @@ int main(){
     std::cout << std::setw(COLUMN_WIDTH) << "value1 ^ value2 : "
 		<< std::setw(COLUMN_WIDTH) << std::bitset<8>(value1 ^ value2) << std::endl;
     std::cout << std::endl;
-
-
-
-   
     return 0;
 }

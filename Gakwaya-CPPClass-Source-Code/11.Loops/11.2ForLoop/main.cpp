@@ -76,6 +76,8 @@ int main(){
 
     const size_t COUNT{100};
 
+    std::cout << COUNT << "This is the size_t Count " << std::endl;
+
     for(size_t i{0} ; i < COUNT ; ++i){
         std::cout << i << " : I love C++" << std::endl;
     }

@@ -79,7 +79,7 @@ int main(){
     
 
 
-   // Read only arrays
+   // Read only arrays, that are initialized with const datatype
    /*
    const int birds[] {10,12,15,11,18,17,23,56}; 
    birds[2] = 8;

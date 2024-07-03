@@ -4,7 +4,7 @@
 int main(){
 
 	//Declare array
-    char message [5]  {"Hello"};
+    char message [6]  {"Hello"};
     //int data[5] {1,2,3,3,3};
 
     //std::cout << "data : " << data << std::endl;
@@ -74,6 +74,7 @@ int main(){
     //Can't safely print out arrays other than those of characters
     int numbers [] {1,2,3,4,5};
     std::cout << "numbers :  " << numbers << std::endl;
+    std::cout << "char array:  " << message << std::endl;
  
 
     

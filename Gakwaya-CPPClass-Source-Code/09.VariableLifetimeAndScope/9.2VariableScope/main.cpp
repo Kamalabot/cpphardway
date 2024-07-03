@@ -16,8 +16,9 @@ void some_other_function(){
 
 
 int main(){
- std::cout << "Inside main function global_var : " << global_var1 << std::endl;
- //local_var = 5;
-   
+    std::cout << "Inside main function global_var : " << global_var1 << std::endl;
+    int local_var = 5;
+    some_function();
+    std::cout << "Inside main function local_var : " << local_var << std::endl;
     return 0;
 }

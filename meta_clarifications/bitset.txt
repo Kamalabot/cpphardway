@@ -1,0 +1,14 @@
+The main functions of the bitset header include:
+
+- set(): sets the bit value at a specified index to 1
+- reset(): sets the bit value at a specified index to 0
+- flip(): flips the bit value at a specified index
+- count(): counts the number of set bits
+- test(): returns the boolean value at a specified index
+- any(): checks if any bit is set
+- none(): checks if none of the bits are set
+- all(): checks if all of the bits are set
+- size(): returns the size of the bitset
+- to_string(): converts the bitset to a standard string
+- to_ulong(): converts the bitset to an unsigned long
+- to_ullong(): converts the bitset to an unsigned long long

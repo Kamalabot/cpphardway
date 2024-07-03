@@ -5,7 +5,7 @@ int main(){
 	char operation; // +,-,*,/
     double operand1;
     double operand2;
-    bool end {false};
+    bool end {false}; // starting with the end == false
     
     std::cout << "Welcome to Awesome Calculator"<< std::endl;
     

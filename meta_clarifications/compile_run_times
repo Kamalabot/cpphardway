@@ -1,0 +1,32 @@
+In C++, the program execution can be divided into two stages:
+
+Compile Time
+
+- Also known as "build time" or "translation time"
+- Occurs when the code is compiled by the compiler (e.g., g++ or clang++)
+- The compiler checks the code for syntax errors, performs semantic analysis, and generates machine code
+- Evaluates constant expressions, template instantiations, and static assertions
+- Resolves symbolic references (e.g., linking libraries)
+- Outputs an executable file or object files
+
+Run Time
+
+- Also known as "execution time"
+- Occurs when the compiled program is executed by the computer's processor
+- The program is loaded into memory, and the operating system allocates resources
+- The program executes, performs calculations, and interacts with the user or external devices
+- Dynamic memory allocation and deallocation occur during runtime
+- Errors or exceptions may occur during runtime, handled by try-catch blocks or error handling mechanisms
+
+Key differences:
+
+- Compile time is for static analysis and code generation, while run time is for dynamic execution.
+- Compile-time errors are typically syntax or semantic errors, while runtime errors are often logical or environmental.
+- Compile-time performance optimization focuses on reducing compilation time, while runtime performance optimization aims to improve execution speed.
+
+Understanding the distinction between compile time and run time is crucial for effective C++ programming, as it helps you:
+
+- Optimize code for performance
+- Debug and troubleshoot issues
+- Design and implement efficient algorithms
+- Utilize compiler features and optimizations

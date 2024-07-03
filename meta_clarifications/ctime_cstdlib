@@ -1,0 +1,28 @@
+The cstdlib and ctime headers in C++ provide various functions for tasks like memory management, sorting, searching, and time manipulation. Here are some important functions from these headers:
+
+cstdlib:
+
+1. malloc(): Dynamically allocates memory.
+2. calloc(): Dynamically allocates memory and initializes it to zero.
+3. realloc(): Resizes a previously allocated memory block.
+4. free(): Releases allocated memory.
+5. qsort(): Sorts an array of elements.
+6. bsearch(): Searches for an element in a sorted array.
+7. rand(): Generates a random number.
+8. srand(): Initializes the random number generator.
+9. atoi(): Converts a string to an integer.
+10. atol(): Converts a string to a long integer.
+11. atof(): Converts a string to a floating-point number.
+
+ctime:
+
+1. time(): Returns the current time as a time_t object.
+2. clock(): Returns the processor time as a clock_t object.
+3. ctime(): Converts a time_t object to a string.
+4. mktime(): Converts a struct tm object to a time_t object.
+5. difftime(): Calculates the difference between two time_t objects.
+6. strftime(): Formats a struct tm object as a string.
+7. gmtime(): Converts a time_t object to a struct tm object representing UTC time.
+8. localtime(): Converts a time_t object to a struct tm object representing local time.
+
+These functions are essential for tasks like memory management, sorting, searching, random number generation, and time manipulation in C++.

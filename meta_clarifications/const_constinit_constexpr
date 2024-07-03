@@ -1,0 +1,49 @@
+Both constexpr and const are used to define constants in C++, but there are key differences:
+
+const:
+
+- const is a cv-qualifier (constant volatile qualifier) that indicates a variable's value won't change after initialization.
+- It's a runtime concept, meaning the variable's value is determined during program execution.
+- const variables can be initialized dynamically, using runtime computations.
+
+Example: const int x = foo(); (x is const, but its value is determined at runtime)
+
+constexpr:
+
+- constexpr is a keyword that defines a variable or function that can be evaluated at compile-time.
+- It's a compile-time concept, meaning the variable's value is determined during compilation.
+- constexpr variables must be initialized with a constant expression, which can be evaluated by the compiler.
+
+Example: constexpr int x = 5; (x is constexpr, and its value is determined at compile-time)
+
+In your example:
+
+- constexpr int SOME_LIB_MAJOR_VERSION {1237}; defines a constant integer variable SOME_LIB_MAJOR_VERSION with the value 1237, which is evaluated at compile-time.
+- const int SOME_LIB_MAJOR_VERSION {1237}; defines a constant integer variable SOME_LIB_MAJOR_VERSION with the value 1237, which is determined at runtime (although the value is obvious in this case).
+
+In summary:
+
+- const means "runtime constant"
+- constexpr means "compile-time constant"
+
+While both variables are constant, constexpr provides additional guarantees about compile-time evaluation, making it useful for metaprogramming and optimization.
+
+constinit is a keyword in C++20 and later that specifies that a variable is initialized at compile-time, similar to constexpr, but with some differences.
+
+constinit is used to define a variable that:
+
+1. Is initialized at compile-time.
+2. Has a constant expression as its initializer.
+3. Is not necessarily a constexpr variable (i.e., its value may not be computable at compile-time).
+
+In essence, constinit guarantees that the variable is initialized before the program starts running, but it doesn't require the initializer to be a constexpr.
+
+Here's an example:
+
+constinit int x = 42; // initialized at compile-time
+
+constinit is useful when you want to ensure that a variable is initialized at compile-time, but the initializer may not be a constexpr (e.g., it might involve a non-constexpr function call).
+
+Keep in mind that constinit is only available in C++20 and later versions.
+
+Let me know if you have more questions!
