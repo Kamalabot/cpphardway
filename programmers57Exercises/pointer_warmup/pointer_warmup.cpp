@@ -5,11 +5,14 @@ using namespace std;
 int main(){
     cout << "Okay, my syntax works..." << endl;
     int pTgt = 120; // this variable is ptr target
-    int *pStr = &pTgt; // address of pTgt is stored in ptr
+    int *pStr = &pTgt; // address of pTgt is stored in pStr
+    int &addrTgt = pTgt; // in this way the address can be assigned
+    // addrTgt variable cannot be used to access the data it is referencing
 
     cout << "Lets print out whats there inside" << endl;
     cout << "Inside the pTgt we have : " << pTgt << endl;
     cout << "Inside the pStr we have : " << pStr << endl;
+    cout << "Inside the &addrTgt we have : " << &addrTgt << endl;
 
     cout << "Lets now work on the double pointers first" << endl;
 
