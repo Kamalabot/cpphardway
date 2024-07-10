@@ -17,6 +17,7 @@ int main(){
 	
 	std::cout << "str1(for loop) : " ;
     for(size_t i{}; i < str1.size(); ++i){
+    // size_t i{} initializes to i = 0
         std::cout << " " << str1[i] ;
     }
 	std::cout << std::endl;
